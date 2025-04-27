@@ -1,0 +1,7 @@
+nslookup internal.example.com $(grep nameserver /etc/resolv.conf | awk '{print $2}')
+nslookup internal.example.com 8.8.8.8
+-------
+or 
+-------
+dig @127.0.0.53 internal.example.com 
+dig @8.8.8.8 internal.example.com 

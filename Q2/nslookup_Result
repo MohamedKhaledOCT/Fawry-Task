@@ -1,0 +1,10 @@
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+** server can't find internal.example.com: NXDOMAIN
+
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+** server can't find internal.example.com: NXDOMAIN
+
