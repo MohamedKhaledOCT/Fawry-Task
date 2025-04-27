@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> @8.8.8.8 internal.example.com
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 24964
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;internal.example.com.		IN	A
+
+;; AUTHORITY SECTION:
+example.com.		1122	IN	SOA	ns.icann.org. noc.dns.icann.org. 2025011624 7200 3600 1209600 3600
+
+;; Query time: 58 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Sun Apr 27 17:39:01 UTC 2025
+;; MSG SIZE  rcvd: 105
+
