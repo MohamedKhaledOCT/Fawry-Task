@@ -258,7 +258,11 @@ traceroute internal.example.com
 ss -tuln | grep -E ':(80|443)'
 ```
 
-![Service Reachability](service_reachability_screenshot.png)
+![Service Reachability]![Curl_talnet](https://github.com/user-attachments/assets/5028742d-905f-424a-9d62-bc2c30bc5525)![netstat](https://github.com/user-attachments/assets/a6856ab0-3b84-4b91-95ea-7b84da9d6e5d)
+![Traceroute](https://github.com/user-attachments/assets/f86063d1-e5d1-4290-ab3f-e7c1f79ac088)
+
+
+
 
 ### Potential Causes
 
