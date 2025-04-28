@@ -51,6 +51,6 @@ Challenging Aspects
 The most challenging part was implementing proper option parsing to handle combined flags like -vn. In a real-world implementation, using the getopts built-in would make this more robust and extensible.
 Another challenge was ensuring the case-insensitive matching works correctly across different environments. I chose to use grep internally for this matching to ensure consistency, but a more self-contained approach would use Bash's pattern matching capabilities.
 The current implementation has limitations in pattern matching (it doesn't support full regex) and could be improved with more sophisticated error handling and edge case detection.
-
+-------
 
 
