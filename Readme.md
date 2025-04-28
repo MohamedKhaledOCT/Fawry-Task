@@ -130,7 +130,9 @@ Execute the script with various options:
 ./mygrep.sh -v testfile.txt
 ```
 
-![Script Output](mygrep_screenshot.png)
+![Script Output]
+![Result](https://github.com/user-attachments/assets/a3c7de6a-2156-4a2d-b51f-cc0b361a5474)
+
 
 ### Reflective Analysis
 
@@ -231,6 +233,10 @@ dig internal.example.com
 dig internal.example.com @8.8.8.8
 ```
 
+![DNS Resolution Check]
+![DNS_Commpare](https://github.com/user-attachments/assets/e53932c0-b621-4b30-92e5-675ee3b5b6b1)
+
+
 #### 2. Diagnose Service Reachability
 
 Check if the service is reachable on the resolved IP:
@@ -258,10 +264,11 @@ traceroute internal.example.com
 ss -tuln | grep -E ':(80|443)'
 ```
 
-![Service Reachability]!
-[Curl_talnet](https://github.com/user-attachments/assets/5028742d-905f-424a-9d62-bc2c30bc5525)![netstat](https://github.com/user-attachments/assets/a6856ab0-3b84-4b91-95ea-7b84da9d6e5d)
-![Traceroute](https://github.com/user-attachments/assets/f86063d1-e5d1-4290-ab3f-e7c1f79ac088)
-
+![Service Reachability]
+![Curl_talnet](https://github.com/user-attachments/assets/b09e8456-f056-4dae-a429-664704501832)
+![connection_testing](https://github.com/user-attachments/assets/ce17827b-ff90-4d1f-a125-a38b24ce6c87)
+![netstat](https://github.com/user-attachments/assets/c6cc0b6d-31e2-4e71-872c-575fd1e1404d)
+![Traceroute](https://github.com/user-attachments/assets/2158c1cc-79f8-4d8c-ab57-669c219c8dde)
 
 
 
@@ -418,16 +425,14 @@ echo "192.168.1.100 internal.example.com" | sudo tee -a /etc/hosts
 ping internal.example.com
 ```
 
-![Local hosts configuration](hosts_bypass_screenshot.png)
 
 #### Persist DNS Settings with systemd-resolved
 
 ```bash
 sudo vi /etc/systemd/resolved.conf
 
-# Uncomment and edit:
-# DNS=8.8.8.8 1.1.1.1
-# FallbackDNS=9.9.9.9 149.112.112.112
+  DNS=8.8.8.8 1.1.1.1
+  FallbackDNS=9.9.9.9 149.112.112.112
 
 sudo systemctl restart systemd-resolved
 ```
@@ -446,3 +451,4 @@ sudo systemctl restart NetworkManager
 ```
 
 
+Through systematic troubleshooting of these potential issues, you can identify and resolve the connectivity problems with the internal web dashboard.
