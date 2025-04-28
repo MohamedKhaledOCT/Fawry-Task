@@ -1,7 +1,26 @@
+1- Verify DNS Resolution
+
 nslookup internal.example.com $(grep nameserver /etc/resolv.conf | awk '{print $2}')
 nslookup internal.example.com 8.8.8.8
 -------
 or 
 -------
 dig @127.0.0.53 internal.example.com 
-dig @8.8.8.8 internal.example.com 
+dig @8.8.8.8 internal.example.com
+
+-----------------------------------------------------------------------
+2- Diagnose Service Reachability
+
+curl -v http://internal.example.com
+
+-----------------
+telnet internal.example.com 80
+telnet internal.example.com 443
+------------------
+nc -zv internal.example.com 80
+nc -zv internal.example.com 443
+------------------
+traceroute internal.example.com
+------------------
+ss -tuln | grep -E ':(80|443)'
+ 

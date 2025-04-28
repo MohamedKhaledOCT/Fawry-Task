@@ -1,0 +1,56 @@
+Option Parsing:
+
+
+- use while loop to check  the first argument start with " - " Or Not 
+
+- It matches specific options (-n, -v, -vn, -nv, --help) and sets boolean flags accordingly.
+
+- After processing options, it shifts to the next argument.
+
+Argument Handling:
+
+
+After options  processed script expects at least two more arguments: the search pattern and the filename.
+
+
+It validates that both are provided and that the file exists.
+
+
+Processing Logic:
+
+The script reads the file line by line.
+For each line, it checks if the pattern matches (case-insensitive).
+Based on the flags set (show_line_numbers, invert_match), it determines whether and how to output the line.
+
+
+
+Extending for Regex and Additional Options
+If I were to support regex and options like -i (case-insensitive), -c (count), and -l (files with matches), I would need to:
+
+Add new flag variables for each option and extend the option parsing section.
+Update the matching mechanism:
+
+For regex support, I would use Bash's built-in regex capabilities with =~ instead of calling grep internally.
+For case-insensitivity (-i), I'd add a specific flag rather than making it the default.
+
+
+Modify the output mechanism:
+
+For -c (count), I'd keep a running counter instead of printing lines.
+For -l (files with matches), I'd just print the filename once if any match is found.
+
+
+
+The structure would need to be more modular, potentially with separate functions for:
+
+Option parsing (using getopts)
+Pattern matching (with different modes)
+Output formatting (handling different output types)
+
+Challenging Aspects
+The most challenging part was implementing proper option parsing to handle combined flags like -vn. In a real-world implementation, using the getopts built-in would make this more robust and extensible.
+Another challenge was ensuring the case-insensitive matching works correctly across different environments. I chose to use grep internally for this matching to ensure consistency, but a more self-contained approach would use Bash's pattern matching capabilities.
+The current implementation has limitations in pattern matching (it doesn't support full regex) and could be improved with more sophisticated error handling and edge case detection.
+
+
+
