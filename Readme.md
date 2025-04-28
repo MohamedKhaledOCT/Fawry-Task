@@ -265,6 +265,8 @@ ss -tuln | grep -E ':(80|443)'
 ```
 
 ![Service Reachability]
+
+
 ![Curl_talnet](https://github.com/user-attachments/assets/b09e8456-f056-4dae-a429-664704501832)
 ![connection_testing](https://github.com/user-attachments/assets/ce17827b-ff90-4d1f-a125-a38b24ce6c87)
 ![netstat](https://github.com/user-attachments/assets/c6cc0b6d-31e2-4e71-872c-575fd1e1404d)
@@ -450,5 +452,3 @@ sudo vi /etc/NetworkManager/conf.d/dns-servers.conf
 sudo systemctl restart NetworkManager
 ```
 
-
-Through systematic troubleshooting of these potential issues, you can identify and resolve the connectivity problems with the internal web dashboard.
