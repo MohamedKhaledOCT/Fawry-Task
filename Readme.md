@@ -231,8 +231,6 @@ dig internal.example.com
 dig internal.example.com @8.8.8.8
 ```
 
-![DNS Resolution Check](dns_resolution_screenshot.png)
-
 #### 2. Diagnose Service Reachability
 
 Check if the service is reachable on the resolved IP:
@@ -442,6 +440,4 @@ sudo vi /etc/NetworkManager/conf.d/dns-servers.conf
 sudo systemctl restart NetworkManager
 ```
 
-![Persistent DNS Settings](persistent_dns_screenshot.png)
 
-Through systematic troubleshooting of these potential issues, you can identify and resolve the connectivity problems with the internal web dashboard.
